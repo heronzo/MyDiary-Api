@@ -33,5 +33,9 @@ entries =[
 def get_entries():
     return jsonify({'entries': entries})
 
+@app.route('/')
+def index():
+    return "Hello, World!"
+
 if __name__=="__main__":
     app.run(debug=True)
