@@ -2,8 +2,7 @@ import unittest
 import app
 
 class TestApp(unittest.TestCase):
-    with app.test_entries_endpoint() as e:
-        response = e.get('/some/path/that/exists')
-        self.assertEquals(response.status_code, 200)
-       
-
+    def test_entries_ndpoint(self):
+         res = self.client().get('/bucketlists/')
+         self.assertEqual(res.status_code, 200)
+        

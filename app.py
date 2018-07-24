@@ -29,5 +29,9 @@ entries =[
         }
 ]
 
+@app.route('/diary/api/v1.0/entries', methods=['GET'])
+def get_entries():
+    return jsonify({'entries': entries})
+
 if __name__=="__main__":
     app.run(debug=True)
